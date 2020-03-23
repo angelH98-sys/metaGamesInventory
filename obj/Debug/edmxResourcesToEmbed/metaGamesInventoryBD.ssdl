@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="metaGamesInventoryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="actions">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="table_name" Type="varchar" MaxLength="20" />
+    <Property Name="register_id" Type="int" />
+    <Property Name="employee_action" Type="varchar" MaxLength="10" />
+    <Property Name="old_data" Type="varchar" MaxLength="1000" />
+    <Property Name="new_data" Type="varchar" MaxLength="1000" />
+    <Property Name="short_description" Type="varchar" MaxLength="100" />
+    <Property Name="action_date" Type="datetime" />
+    <Property Name="id_employee" Type="int" />
+  </EntityType>
+  <EntityType Name="company">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="company_address" Type="varchar" MaxLength="255" />
+    <Property Name="email" Type="varchar" MaxLength="255" />
+    <Property Name="phone" Type="varchar" MaxLength="8" />
+  </EntityType>
+  <EntityType Name="discount">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="percentage" Type="int" Nullable="false" />
+    <Property Name="start" Type="date" />
+    <Property Name="ending" Type="date" />
+  </EntityType>
+  <EntityType Name="employee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="login_user" Type="varchar" MaxLength="255" />
+    <Property Name="login_pass" Type="varchar" MaxLength="255" />
+    <Property Name="emergency_question" Type="varchar" MaxLength="255" />
+    <Property Name="answer" Type="varchar" MaxLength="255" />
+    <Property Name="id_group" Type="int" />
+  </EntityType>
+  <EntityType Name="groups">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="group_description" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="groups_permission">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_groups" Type="int" />
+    <Property Name="id_permission" Type="int" />
+  </EntityType>
+  <EntityType Name="orders">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="order_date" Type="date" />
+    <Property Name="amount_untaxed" Type="float" />
+    <Property Name="amount_tax" Type="float" />
+    <Property Name="amount_total" Type="float" />
+    <Property Name="transaction_type" Type="varchar" MaxLength="10" />
+    <Property Name="order_state" Type="varchar" MaxLength="10" />
+    <Property Name="third" Type="varchar" MaxLength="255" />
+    <Property Name="id_employee" Type="int" />
+  </EntityType>
+  <EntityType Name="orders_product">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="quantity" Type="int" />
+    <Property Name="unit_price" Type="float" />
+    <Property Name="amount_discount" Type="float" />
+    <Property Name="subtotal" Type="float" />
+    <Property Name="id_discount" Type="int" />
+    <Property Name="id_order" Type="int" />
+    <Property Name="id_product" Type="int" />
+  </EntityType>
+  <EntityType Name="orders_tax">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_order" Type="int" />
+    <Property Name="id_tax" Type="int" />
+  </EntityType>
+  <EntityType Name="permission">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="table_name" Type="varchar" MaxLength="255" />
+    <Property Name="table_action" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="price" Type="float" />
+    <Property Name="product_description" Type="varchar" MaxLength="255" />
+    <Property Name="minimum_quantity" Type="int" />
+    <Property Name="stock" Type="int" />
+    <Property Name="id_provider" Type="int" />
+    <Property Name="id_product_category" Type="int" />
+  </EntityType>
+  <EntityType Name="product_category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="provider">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="255" />
+    <Property Name="phone" Type="varchar" MaxLength="255" />
+    <Property Name="mobile" Type="varchar" MaxLength="255" />
+    <Property Name="payment_term" Type="varchar" MaxLength="50" />
+    <Property Name="id_company" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tax">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="percentage" Type="int" Nullable="false" />
+    <Property Name="default_tax" Type="bit" />
+  </EntityType>
+  <Association Name="FK__actions__id_empl__3B75D760">
+    <End Role="employee" Type="Self.employee" Multiplicity="0..1" />
+    <End Role="actions" Type="Self.actions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="actions">
+        <PropertyRef Name="id_employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__employee__id_gro__2D27B809">
+    <End Role="groups" Type="Self.groups" Multiplicity="0..1" />
+    <End Role="employee" Type="Self.employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="groups">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="employee">
+        <PropertyRef Name="id_group" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__groups_pe__id_gr__29572725">
+    <End Role="groups" Type="Self.groups" Multiplicity="0..1" />
+    <End Role="groups_permission" Type="Self.groups_permission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="groups">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="groups_permission">
+        <PropertyRef Name="id_groups" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__groups_pe__id_pe__2A4B4B5E">
+    <End Role="permission" Type="Self.permission" Multiplicity="0..1" />
+    <End Role="groups_permission" Type="Self.groups_permission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="permission">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="groups_permission">
+        <PropertyRef Name="id_permission" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders__id_emplo__300424B4">
+    <End Role="employee" Type="Self.employee" Multiplicity="0..1" />
+    <End Role="orders" Type="Self.orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="orders">
+        <PropertyRef Name="id_employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders_pr__id_di__32E0915F">
+    <End Role="discount" Type="Self.discount" Multiplicity="0..1" />
+    <End Role="orders_product" Type="Self.orders_product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="discount">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="orders_product">
+        <PropertyRef Name="id_discount" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders_pr__id_or__33D4B598">
+    <End Role="orders" Type="Self.orders" Multiplicity="0..1" />
+    <End Role="orders_product" Type="Self.orders_product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="orders">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="orders_product">
+        <PropertyRef Name="id_order" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders_pr__id_pr__34C8D9D1">
+    <End Role="product" Type="Self.product" Multiplicity="0..1" />
+    <End Role="orders_product" Type="Self.orders_product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="orders_product">
+        <PropertyRef Name="id_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders_ta__id_or__37A5467C">
+    <End Role="orders" Type="Self.orders" Multiplicity="0..1" />
+    <End Role="orders_tax" Type="Self.orders_tax" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="orders">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="orders_tax">
+        <PropertyRef Name="id_order" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders_ta__id_ta__38996AB5">
+    <End Role="tax" Type="Self.tax" Multiplicity="0..1" />
+    <End Role="orders_tax" Type="Self.orders_tax" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tax">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="orders_tax">
+        <PropertyRef Name="id_tax" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__product__id_prod__1ED998B2">
+    <End Role="product_category" Type="Self.product_category" Multiplicity="0..1" />
+    <End Role="product" Type="Self.product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product_category">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="product">
+        <PropertyRef Name="id_product_category" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__product__id_prov__1DE57479">
+    <End Role="provider" Type="Self.provider" Multiplicity="0..1" />
+    <End Role="product" Type="Self.product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="provider">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="product">
+        <PropertyRef Name="id_provider" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__provider__id_com__182C9B23">
+    <End Role="company" Type="Self.company" Multiplicity="0..1" />
+    <End Role="provider" Type="Self.provider" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="company">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="provider">
+        <PropertyRef Name="id_company" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="metaGamesInventoryModelStoreContainer">
+    <EntitySet Name="actions" EntityType="Self.actions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="company" EntityType="Self.company" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="discount" EntityType="Self.discount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="employee" EntityType="Self.employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="groups" EntityType="Self.groups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="groups_permission" EntityType="Self.groups_permission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="orders" EntityType="Self.orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="orders_product" EntityType="Self.orders_product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="orders_tax" EntityType="Self.orders_tax" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="permission" EntityType="Self.permission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="product" EntityType="Self.product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="product_category" EntityType="Self.product_category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="provider" EntityType="Self.provider" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tax" EntityType="Self.tax" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__actions__id_empl__3B75D760" Association="Self.FK__actions__id_empl__3B75D760">
+      <End Role="employee" EntitySet="employee" />
+      <End Role="actions" EntitySet="actions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__employee__id_gro__2D27B809" Association="Self.FK__employee__id_gro__2D27B809">
+      <End Role="groups" EntitySet="groups" />
+      <End Role="employee" EntitySet="employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK__groups_pe__id_gr__29572725" Association="Self.FK__groups_pe__id_gr__29572725">
+      <End Role="groups" EntitySet="groups" />
+      <End Role="groups_permission" EntitySet="groups_permission" />
+    </AssociationSet>
+    <AssociationSet Name="FK__groups_pe__id_pe__2A4B4B5E" Association="Self.FK__groups_pe__id_pe__2A4B4B5E">
+      <End Role="permission" EntitySet="permission" />
+      <End Role="groups_permission" EntitySet="groups_permission" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders__id_emplo__300424B4" Association="Self.FK__orders__id_emplo__300424B4">
+      <End Role="employee" EntitySet="employee" />
+      <End Role="orders" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders_pr__id_di__32E0915F" Association="Self.FK__orders_pr__id_di__32E0915F">
+      <End Role="discount" EntitySet="discount" />
+      <End Role="orders_product" EntitySet="orders_product" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders_pr__id_or__33D4B598" Association="Self.FK__orders_pr__id_or__33D4B598">
+      <End Role="orders" EntitySet="orders" />
+      <End Role="orders_product" EntitySet="orders_product" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders_pr__id_pr__34C8D9D1" Association="Self.FK__orders_pr__id_pr__34C8D9D1">
+      <End Role="product" EntitySet="product" />
+      <End Role="orders_product" EntitySet="orders_product" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders_ta__id_or__37A5467C" Association="Self.FK__orders_ta__id_or__37A5467C">
+      <End Role="orders" EntitySet="orders" />
+      <End Role="orders_tax" EntitySet="orders_tax" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders_ta__id_ta__38996AB5" Association="Self.FK__orders_ta__id_ta__38996AB5">
+      <End Role="tax" EntitySet="tax" />
+      <End Role="orders_tax" EntitySet="orders_tax" />
+    </AssociationSet>
+    <AssociationSet Name="FK__product__id_prod__1ED998B2" Association="Self.FK__product__id_prod__1ED998B2">
+      <End Role="product_category" EntitySet="product_category" />
+      <End Role="product" EntitySet="product" />
+    </AssociationSet>
+    <AssociationSet Name="FK__product__id_prov__1DE57479" Association="Self.FK__product__id_prov__1DE57479">
+      <End Role="provider" EntitySet="provider" />
+      <End Role="product" EntitySet="product" />
+    </AssociationSet>
+    <AssociationSet Name="FK__provider__id_com__182C9B23" Association="Self.FK__provider__id_com__182C9B23">
+      <End Role="company" EntitySet="company" />
+      <End Role="provider" EntitySet="provider" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

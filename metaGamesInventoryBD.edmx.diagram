@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0356101f989945bf85c028add47503bf" Name="Diagram1">
+        <EntityTypeShape EntityType="metaGamesInventoryModel.actions" Width="1.5" PointX="5.25" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="metaGamesInventoryModel.company" Width="2.125" PointX="0.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="metaGamesInventoryModel.discount" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="metaGamesInventoryModel.employee" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="metaGamesInventoryModel.groups" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="metaGamesInventoryModel.groups_permission" Width="1.5" PointX="3" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="metaGamesInventoryModel.orders" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="metaGamesInventoryModel.orders_product" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="metaGamesInventoryModel.orders_tax" Width="1.5" PointX="7.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="metaGamesInventoryModel.permission" Width="1.5" PointX="0.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="metaGamesInventoryModel.product" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="metaGamesInventoryModel.product_category" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="metaGamesInventoryModel.provider" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="metaGamesInventoryModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="metaGamesInventoryModel.tax" Width="1.5" PointX="5.25" PointY="17.125" IsExpanded="true" />
+        <AssociationConnector Association="metaGamesInventoryModel.FK__actions__id_empl__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="metaGamesInventoryModel.FK__provider__id_com__182C9B23" ManuallyRouted="false" />
+        <AssociationConnector Association="metaGamesInventoryModel.FK__orders_pr__id_di__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="metaGamesInventoryModel.FK__employee__id_gro__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="metaGamesInventoryModel.FK__orders__id_emplo__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="metaGamesInventoryModel.FK__groups_pe__id_gr__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="metaGamesInventoryModel.FK__groups_pe__id_pe__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="metaGamesInventoryModel.FK__orders_pr__id_or__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="metaGamesInventoryModel.FK__orders_ta__id_or__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="metaGamesInventoryModel.FK__orders_pr__id_pr__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="metaGamesInventoryModel.FK__orders_ta__id_ta__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="metaGamesInventoryModel.FK__product__id_prod__1ED998B2" ManuallyRouted="false" />
+        <AssociationConnector Association="metaGamesInventoryModel.FK__product__id_prov__1DE57479" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="metaGamesInventoryModelStoreContainer" CdmEntityContainer="metaGamesInventoryAlterEntities">
+    <EntitySetMapping Name="actions">
+      <EntityTypeMapping TypeName="metaGamesInventoryModel.actions">
+        <MappingFragment StoreEntitySet="actions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="table_name" ColumnName="table_name" />
+          <ScalarProperty Name="register_id" ColumnName="register_id" />
+          <ScalarProperty Name="employee_action" ColumnName="employee_action" />
+          <ScalarProperty Name="old_data" ColumnName="old_data" />
+          <ScalarProperty Name="new_data" ColumnName="new_data" />
+          <ScalarProperty Name="short_description" ColumnName="short_description" />
+          <ScalarProperty Name="action_date" ColumnName="action_date" />
+          <ScalarProperty Name="id_employee" ColumnName="id_employee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="company">
+      <EntityTypeMapping TypeName="metaGamesInventoryModel.company">
+        <MappingFragment StoreEntitySet="company">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="company_address" ColumnName="company_address" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="discount">
+      <EntityTypeMapping TypeName="metaGamesInventoryModel.discount">
+        <MappingFragment StoreEntitySet="discount">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="percentage" ColumnName="percentage" />
+          <ScalarProperty Name="start" ColumnName="start" />
+          <ScalarProperty Name="ending" ColumnName="ending" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="employee">
+      <EntityTypeMapping TypeName="metaGamesInventoryModel.employee">
+        <MappingFragment StoreEntitySet="employee">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="login_user" ColumnName="login_user" />
+          <ScalarProperty Name="login_pass" ColumnName="login_pass" />
+          <ScalarProperty Name="emergency_question" ColumnName="emergency_question" />
+          <ScalarProperty Name="answer" ColumnName="answer" />
+          <ScalarProperty Name="id_group" ColumnName="id_group" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="groups">
+      <EntityTypeMapping TypeName="metaGamesInventoryModel.groups">
+        <MappingFragment StoreEntitySet="groups">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="group_description" ColumnName="group_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="groups_permission">
+      <EntityTypeMapping TypeName="metaGamesInventoryModel.groups_permission">
+        <MappingFragment StoreEntitySet="groups_permission">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_groups" ColumnName="id_groups" />
+          <ScalarProperty Name="id_permission" ColumnName="id_permission" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orders">
+      <EntityTypeMapping TypeName="metaGamesInventoryModel.orders">
+        <MappingFragment StoreEntitySet="orders">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="order_date" ColumnName="order_date" />
+          <ScalarProperty Name="amount_untaxed" ColumnName="amount_untaxed" />
+          <ScalarProperty Name="amount_tax" ColumnName="amount_tax" />
+          <ScalarProperty Name="amount_total" ColumnName="amount_total" />
+          <ScalarProperty Name="transaction_type" ColumnName="transaction_type" />
+          <ScalarProperty Name="order_state" ColumnName="order_state" />
+          <ScalarProperty Name="third" ColumnName="third" />
+          <ScalarProperty Name="id_employee" ColumnName="id_employee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orders_product">
+      <EntityTypeMapping TypeName="metaGamesInventoryModel.orders_product">
+        <MappingFragment StoreEntitySet="orders_product">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="unit_price" ColumnName="unit_price" />
+          <ScalarProperty Name="amount_discount" ColumnName="amount_discount" />
+          <ScalarProperty Name="subtotal" ColumnName="subtotal" />
+          <ScalarProperty Name="id_discount" ColumnName="id_discount" />
+          <ScalarProperty Name="id_order" ColumnName="id_order" />
+          <ScalarProperty Name="id_product" ColumnName="id_product" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orders_tax">
+      <EntityTypeMapping TypeName="metaGamesInventoryModel.orders_tax">
+        <MappingFragment StoreEntitySet="orders_tax">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_order" ColumnName="id_order" />
+          <ScalarProperty Name="id_tax" ColumnName="id_tax" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="permission">
+      <EntityTypeMapping TypeName="metaGamesInventoryModel.permission">
+        <MappingFragment StoreEntitySet="permission">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="table_name" ColumnName="table_name" />
+          <ScalarProperty Name="table_action" ColumnName="table_action" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="product">
+      <EntityTypeMapping TypeName="metaGamesInventoryModel.product">
+        <MappingFragment StoreEntitySet="product">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="product_description" ColumnName="product_description" />
+          <ScalarProperty Name="minimum_quantity" ColumnName="minimum_quantity" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="id_provider" ColumnName="id_provider" />
+          <ScalarProperty Name="id_product_category" ColumnName="id_product_category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="product_category">
+      <EntityTypeMapping TypeName="metaGamesInventoryModel.product_category">
+        <MappingFragment StoreEntitySet="product_category">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="provider">
+      <EntityTypeMapping TypeName="metaGamesInventoryModel.provider">
+        <MappingFragment StoreEntitySet="provider">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="payment_term" ColumnName="payment_term" />
+          <ScalarProperty Name="id_company" ColumnName="id_company" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="metaGamesInventoryModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tax">
+      <EntityTypeMapping TypeName="metaGamesInventoryModel.tax">
+        <MappingFragment StoreEntitySet="tax">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="percentage" ColumnName="percentage" />
+          <ScalarProperty Name="default_tax" ColumnName="default_tax" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
