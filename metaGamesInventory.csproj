@@ -67,6 +67,24 @@
     <Compile Include="CUCompany.Designer.cs">
       <DependentUpon>CUCompany.cs</DependentUpon>
     </Compile>
+    <Compile Include="CUEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CUEmployees.Designer.cs">
+      <DependentUpon>CUEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CUProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CUProduct.Designer.cs">
+      <DependentUpon>CUProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CUProductCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CUProductCategory.Designer.cs">
+      <DependentUpon>CUProductCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="discount.cs">
       <DependentUpon>metaGamesInventoryBD.tt</DependentUpon>
     </Compile>
@@ -90,6 +108,12 @@
     </Compile>
     <Compile Include="CUProvider.Designer.cs">
       <DependentUpon>CUProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="metaGamesInventoryBD.Context.cs">
       <AutoGen>True</AutoGen>
@@ -135,6 +159,30 @@
     <Compile Include="RDCompany.Designer.cs">
       <DependentUpon>RDCompany.cs</DependentUpon>
     </Compile>
+    <Compile Include="RDEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RDEmployees.Designer.cs">
+      <DependentUpon>RDEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RDProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RDProduct.Designer.cs">
+      <DependentUpon>RDProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RDProductCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RDProductCategory.Designer.cs">
+      <DependentUpon>RDProductCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.Designer.cs">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>metaGamesInventoryBD.tt</DependentUpon>
     </Compile>
@@ -144,11 +192,23 @@
     <EmbeddedResource Include="CUCompany.resx">
       <DependentUpon>CUCompany.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CUEmployees.resx">
+      <DependentUpon>CUEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CUProduct.resx">
+      <DependentUpon>CUProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CUProductCategory.resx">
+      <DependentUpon>CUProductCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="home.resx">
       <DependentUpon>home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CUProvider.resx">
       <DependentUpon>CUProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -161,6 +221,18 @@
     </Compile>
     <EmbeddedResource Include="RDCompany.resx">
       <DependentUpon>RDCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDEmployees.resx">
+      <DependentUpon>RDEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDProduct.resx">
+      <DependentUpon>RDProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDProductCategory.resx">
+      <DependentUpon>RDProductCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResetPassword.resx">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="metaGamesInventoryBD.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
