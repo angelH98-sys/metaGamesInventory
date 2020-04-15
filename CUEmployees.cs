@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
+
 using System.Windows.Forms;
 
 namespace metaGamesInventory
@@ -28,6 +30,27 @@ namespace metaGamesInventory
             btnCancel.Visible = true;
         }
 
+        static string GetMd5Hash(MD5 md5Hash, string input)
+        {
+
+            // Convert the input string to a byte array and compute the hash.
+            byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+            // Create a new Stringbuilder to collect the bytes
+            // and create a string.
+            StringBuilder sBuilder = new StringBuilder();
+
+            // Loop through each byte of the hashed data 
+            // and format each one as a hexadecimal string.
+            for (int i = 0; i < data.Length; i++)
+            {
+                sBuilder.Append(data[i].ToString("x2"));
+            }
+
+            // Return the hexadecimal string.
+            return sBuilder.ToString();
+        }
+
         private void dataToTextbox()
         //Método encargado de inicializar los campos del formulario, tomando referencia del objeto a actualizar
         {
@@ -47,11 +70,12 @@ namespace metaGamesInventory
             else
             {
                 employee obj = new employee();//Creación de objeto de la tabla: Employee
-
+                MD5 md5Hash = MD5.Create();
                 //Asignamos valores del formulario al objeto creado
                 obj.name = txtName.Text;
                 obj.login_user = txtUsername.Text;
-                obj.login_pass = txtPassword.Text;
+                obj.login_pass = GetMd5Hash(md5Hash, txtPassword.Text);
+                //obj.login_pass = txtPassword.Text;
                 obj.emergency_question = txtQuestion.Text;
                 obj.answer = txtAnswer.Text;
                 obj.id_group = 1;
