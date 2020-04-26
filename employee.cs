@@ -33,6 +33,11 @@ namespace metaGamesInventory
         public virtual ICollection<actions> actions { get; set; }
         public virtual groups groups { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        override
+        public string ToString()
+        {
+            return name;
+        }
         public virtual ICollection<orders> orders { get; set; }
     }
 }

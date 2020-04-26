@@ -35,13 +35,7 @@ namespace metaGamesInventory
 
         private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            selected = companies.ElementAt<company>(e.RowIndex);//Creamos un objeto con los datos de la celda seleccionada
-            lstDetail.Items.Clear();
-            //Mostramos los datos del objeto, añadiendolos en forma de items del lstDetail
-            lstDetail.Items.Add("\nNombre: \n" + selected.name.ToString());
-            lstDetail.Items.Add("\nDirección: \n" + selected.company_address.ToString());
-            lstDetail.Items.Add("\nE-mail: \n" + selected.email.ToString());
-            lstDetail.Items.Add("\nTeléfono: \n" + selected.phone.ToString());
+            
         }
 
         private void dgvData_DataError(object sender, DataGridViewDataErrorEventArgs e)
@@ -93,6 +87,17 @@ namespace metaGamesInventory
 
         private void RDCompany_FormClosing(object sender, FormClosingEventArgs e)
         {
+        }
+
+        private void dgvData_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selected = companies.ElementAt<company>(e.RowIndex);//Creamos un objeto con los datos de la celda seleccionada
+            lstDetail.Items.Clear();
+            //Mostramos los datos del objeto, añadiendolos en forma de items del lstDetail
+            lstDetail.Items.Add("\nNombre: \n" + selected.name.ToString());
+            lstDetail.Items.Add("\nDirección: \n" + selected.company_address.ToString());
+            lstDetail.Items.Add("\nE-mail: \n" + selected.email.ToString());
+            lstDetail.Items.Add("\nTeléfono: \n" + selected.phone.ToString());
         }
     }
 }

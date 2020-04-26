@@ -99,5 +99,63 @@ namespace metaGamesInventory
             childForm.Text = "Nueva compañía";
             childForm.Show();
         }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nuevaCategoriaDeProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CUProductCategory childForm = new CUProductCategory();
+            childForm.MdiParent = this;
+            childForm.Text = "Nueva categoría de producto";
+            childForm.Show();
+        }
+
+        private void categoriasDeProductoRegistradasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RDProductCategory childForm = new RDProductCategory();
+            childForm.MdiParent = this;
+            childForm.Text = "Categorias de productos registrados";
+            childForm.Show();
+        }
+
+        private void nuevoProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CUProduct childForm = new CUProduct();
+            childForm.MdiParent = this;
+            childForm.Text = "Nuevo producto";
+            childForm.Show();
+        }
+
+        private void productosRegistradosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RDProduct childForm = new RDProduct();
+            childForm.MdiParent = this;
+            childForm.Text = "Productos registrados";
+            childForm.Show();
+        }
+
+        private void EmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NuevoEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CUEmployees childForm = new CUEmployees();
+            childForm.MdiParent = this;
+            childForm.Text = "Nuevo empleado";
+            childForm.Show();
+        }
+
+        private void EmpleadosRegistradosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RDEmployees childForm = new RDEmployees();
+            childForm.MdiParent = this;
+            childForm.Text = "Empleados registrados";
+            childForm.Show();
+        }
     }
 }

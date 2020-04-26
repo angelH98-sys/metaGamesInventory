@@ -9,7 +9,7 @@
         <EntityTypeShape EntityType="metaGamesInventoryModel.company" Width="2.125" PointX="0.5" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="metaGamesInventoryModel.discount" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
         <EntityTypeShape EntityType="metaGamesInventoryModel.employee" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="metaGamesInventoryModel.groups" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="metaGamesInventoryModel.groups" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
         <EntityTypeShape EntityType="metaGamesInventoryModel.groups_permission" Width="1.5" PointX="3" PointY="13.125" IsExpanded="true" />
         <EntityTypeShape EntityType="metaGamesInventoryModel.orders" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
         <EntityTypeShape EntityType="metaGamesInventoryModel.orders_product" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
