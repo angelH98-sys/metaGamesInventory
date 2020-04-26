@@ -157,5 +157,13 @@ namespace metaGamesInventory
             childForm.Text = "Empleados registrados";
             childForm.Show();
         }
+
+        private void nuevaVentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CUSell childForm = new CUSell();
+            childForm.MdiParent = this;
+            childForm.Text = "Nueva Venta";
+            childForm.Show();
+        }
     }
 }

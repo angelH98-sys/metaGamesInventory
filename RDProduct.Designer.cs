@@ -35,6 +35,7 @@
             this.btnCreate = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lstAction = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,8 +98,9 @@
             this.txtSearch.Location = new System.Drawing.Point(13, 37);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.txtSearch.Size = new System.Drawing.Size(364, 26);
+            this.txtSearch.Size = new System.Drawing.Size(409, 26);
             this.txtSearch.TabIndex = 5;
+            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
             // 
             // lstAction
             // 
@@ -110,11 +112,22 @@
             this.lstAction.Size = new System.Drawing.Size(395, 524);
             this.lstAction.TabIndex = 6;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 20);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Buscar:";
+            // 
             // RDProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(983, 579);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lstAction);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnCreate);
@@ -140,5 +153,6 @@
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.ListBox lstAction;
+        private System.Windows.Forms.Label label1;
     }
 }

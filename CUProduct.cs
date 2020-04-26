@@ -189,12 +189,12 @@ namespace metaGamesInventory
                 BD.Entry(productToUpdate).State = System.Data.Entity.EntityState.Modified;
                 BD.SaveChanges();//Persistimos los datos actualizados dentro de la base de datos
                 MessageBox.Show("Producto modificado exitosamente.", "Operación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                closable = true;
+                this.Close();
                 RDProduct form = new RDProduct();
                 form.MdiParent = metaGamesInventory.home.ActiveForm;
                 form.Text = "Productos registrados";
                 form.Show();
-                closable = true;
-                this.Close();
             }
         }
 
@@ -278,12 +278,12 @@ namespace metaGamesInventory
                 BD.product.Add(obj);//Añadimos el objeto previamente establecido al contexto creado
                 BD.SaveChanges();//Persistimos los datos del contexto, dentro de la base de datos
                 MessageBox.Show("Producto registrado exitosamente.", "Operación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                closable = true;
+                this.Close();
                 RDProduct form = new RDProduct();
                 form.MdiParent = metaGamesInventory.home.ActiveForm;
                 form.Text = "Productos registrados";
                 form.Show();
-                closable = true;
-                this.Close();
             }
         }
 
@@ -293,12 +293,12 @@ namespace metaGamesInventory
             var ans = MessageBox.Show("¿Estas seguro de cancelar la modificación del producto " + productToUpdate.name.ToString() + " ?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (ans == DialogResult.Yes)
             {
+                closable = true;
+                this.Close();
                 RDProduct form = new RDProduct();
                 form.MdiParent = metaGamesInventory.home.ActiveForm;
                 form.Text = "Productos registrados";
                 form.Show();
-                closable = true;
-                this.Close();
             }
         }
 

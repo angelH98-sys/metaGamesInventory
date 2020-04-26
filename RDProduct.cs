@@ -51,7 +51,7 @@ namespace metaGamesInventory
 
         private void dgvData_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            ////selected = products.ElementAt<product>(e.RowIndex);
+            selected = products.ElementAt<product>(e.RowIndex);
             //Creamos un objeto con los datos de la celda seleccionada
             lstDetail.Items.Clear();
             lstDetail.Items.Add("Nombre:");
@@ -142,6 +142,24 @@ namespace metaGamesInventory
             form.Text = "Nuevo producto";
             form.Show();
             this.Close();
+        }
+
+        private void txtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            string search = txtSearch.Text.ToLower();
+            for(int i = 0; i < dgvData.RowCount; i++)
+            {
+                if (!dgvData.Rows[i].Cells[1].Value.ToString().ToLower().Contains(search))
+                {
+                    CurrencyManager cm = (CurrencyManager)BindingContext[dgvData.DataSource];
+                    cm.SuspendBinding();
+                    dgvData.Rows[i].Visible = false;
+                }
+                else
+                {
+                    dgvData.Rows[i].Visible = true;
+                }
+            }
         }
     }
 }

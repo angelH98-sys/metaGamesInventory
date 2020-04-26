@@ -85,6 +85,12 @@
     <Compile Include="CUProductCategory.Designer.cs">
       <DependentUpon>CUProductCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="CUSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CUSell.Designer.cs">
+      <DependentUpon>CUSell.cs</DependentUpon>
+    </Compile>
     <Compile Include="discount.cs">
       <DependentUpon>metaGamesInventoryBD.tt</DependentUpon>
     </Compile>
@@ -200,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CUProductCategory.resx">
       <DependentUpon>CUProductCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CUSell.resx">
+      <DependentUpon>CUSell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="home.resx">
       <DependentUpon>home.cs</DependentUpon>

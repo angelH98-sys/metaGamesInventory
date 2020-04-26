@@ -190,13 +190,14 @@
             // nuevaVentaToolStripMenuItem
             // 
             this.nuevaVentaToolStripMenuItem.Name = "nuevaVentaToolStripMenuItem";
-            this.nuevaVentaToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.nuevaVentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nuevaVentaToolStripMenuItem.Text = "&Nueva venta";
+            this.nuevaVentaToolStripMenuItem.Click += new System.EventHandler(this.nuevaVentaToolStripMenuItem_Click);
             // 
             // ventasRegistradasToolStripMenuItem
             // 
             this.ventasRegistradasToolStripMenuItem.Name = "ventasRegistradasToolStripMenuItem";
-            this.ventasRegistradasToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.ventasRegistradasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ventasRegistradasToolStripMenuItem.Text = "&Ventas registradas";
             // 
             // comprasToolStripMenuItem
@@ -295,7 +296,9 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
             this.Name = "home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventario de Meta Games";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
