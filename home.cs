@@ -165,5 +165,13 @@ namespace metaGamesInventory
             childForm.Text = "Nueva Venta";
             childForm.Show();
         }
+
+        private void ventasRegistradasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RDSell childForm = new RDSell();
+            childForm.MdiParent = this;
+            childForm.Text = "Ventas registradas";
+            childForm.Show();
+        }
     }
 }

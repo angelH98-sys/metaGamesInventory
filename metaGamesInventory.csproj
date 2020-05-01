@@ -183,6 +183,12 @@
     <Compile Include="RDProductCategory.Designer.cs">
       <DependentUpon>RDProductCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="RDSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RDSell.Designer.cs">
+      <DependentUpon>RDSell.cs</DependentUpon>
+    </Compile>
     <Compile Include="ResetPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RDProductCategory.resx">
       <DependentUpon>RDProductCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDSell.resx">
+      <DependentUpon>RDSell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ResetPassword.resx">
       <DependentUpon>ResetPassword.cs</DependentUpon>

@@ -51,3 +51,4 @@ C:\Users\angel\source\repos\metaGamesInventory\metaGamesInventory\obj\Debug\meta
 C:\Users\angel\source\repos\metaGamesInventory\metaGamesInventory\obj\Debug\metaGamesInventory.RDEmployees.resources
 C:\Users\angel\source\repos\metaGamesInventory\metaGamesInventory\obj\Debug\metaGamesInventory.ResetPassword.resources
 C:\Users\angel\source\repos\metaGamesInventory\metaGamesInventory\obj\Debug\metaGamesInventory.CUSell.resources
+C:\Users\angel\source\repos\metaGamesInventory\metaGamesInventory\obj\Debug\metaGamesInventory.RDSell.resources

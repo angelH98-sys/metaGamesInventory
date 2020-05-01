@@ -199,6 +199,7 @@
             this.ventasRegistradasToolStripMenuItem.Name = "ventasRegistradasToolStripMenuItem";
             this.ventasRegistradasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ventasRegistradasToolStripMenuItem.Text = "&Ventas registradas";
+            this.ventasRegistradasToolStripMenuItem.Click += new System.EventHandler(this.ventasRegistradasToolStripMenuItem_Click);
             // 
             // comprasToolStripMenuItem
             // 
