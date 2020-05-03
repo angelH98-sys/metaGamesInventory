@@ -52,3 +52,6 @@ C:\Users\angel\source\repos\metaGamesInventory\metaGamesInventory\obj\Debug\meta
 C:\Users\angel\source\repos\metaGamesInventory\metaGamesInventory\obj\Debug\metaGamesInventory.ResetPassword.resources
 C:\Users\angel\source\repos\metaGamesInventory\metaGamesInventory\obj\Debug\metaGamesInventory.CUSell.resources
 C:\Users\angel\source\repos\metaGamesInventory\metaGamesInventory\obj\Debug\metaGamesInventory.RDSell.resources
+C:\Users\RonaldNolasco\Desktop\metaGamesInventory\metaGamesInventory\obj\Debug\metaGamesInventory.CUSell.resources
+C:\Users\RonaldNolasco\Desktop\metaGamesInventory\metaGamesInventory\obj\Debug\metaGamesInventory.RDSell.resources
+C:\Users\RonaldNolasco\Desktop\metaGamesInventory\metaGamesInventory\obj\Debug\metaGamesInventory.PasswordResetConfirmation.resources
