@@ -190,14 +190,14 @@
             // nuevaVentaToolStripMenuItem
             // 
             this.nuevaVentaToolStripMenuItem.Name = "nuevaVentaToolStripMenuItem";
-            this.nuevaVentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevaVentaToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.nuevaVentaToolStripMenuItem.Text = "&Nueva venta";
             this.nuevaVentaToolStripMenuItem.Click += new System.EventHandler(this.nuevaVentaToolStripMenuItem_Click);
             // 
             // ventasRegistradasToolStripMenuItem
             // 
             this.ventasRegistradasToolStripMenuItem.Name = "ventasRegistradasToolStripMenuItem";
-            this.ventasRegistradasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ventasRegistradasToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.ventasRegistradasToolStripMenuItem.Text = "&Ventas registradas";
             this.ventasRegistradasToolStripMenuItem.Click += new System.EventHandler(this.ventasRegistradasToolStripMenuItem_Click);
             // 
@@ -215,12 +215,14 @@
             this.nuevaCompraToolStripMenuItem.Name = "nuevaCompraToolStripMenuItem";
             this.nuevaCompraToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.nuevaCompraToolStripMenuItem.Text = "&Nueva compra";
+            this.nuevaCompraToolStripMenuItem.Click += new System.EventHandler(this.nuevaCompraToolStripMenuItem_Click);
             // 
             // comprasRegistradasToolStripMenuItem
             // 
             this.comprasRegistradasToolStripMenuItem.Name = "comprasRegistradasToolStripMenuItem";
             this.comprasRegistradasToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.comprasRegistradasToolStripMenuItem.Text = "&Compras registradas";
+            this.comprasRegistradasToolStripMenuItem.Click += new System.EventHandler(this.comprasRegistradasToolStripMenuItem_Click);
             // 
             // promocionesToolStripMenuItem
             // 
@@ -236,12 +238,14 @@
             this.nuevaPromociónToolStripMenuItem.Name = "nuevaPromociónToolStripMenuItem";
             this.nuevaPromociónToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.nuevaPromociónToolStripMenuItem.Text = "&Nueva promoción";
+            this.nuevaPromociónToolStripMenuItem.Click += new System.EventHandler(this.nuevaPromociónToolStripMenuItem_Click);
             // 
             // promocionesRegistradasToolStripMenuItem
             // 
             this.promocionesRegistradasToolStripMenuItem.Name = "promocionesRegistradasToolStripMenuItem";
             this.promocionesRegistradasToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.promocionesRegistradasToolStripMenuItem.Text = "&Promociones registradas ";
+            this.promocionesRegistradasToolStripMenuItem.Click += new System.EventHandler(this.promocionesRegistradasToolStripMenuItem_Click);
             // 
             // impuestosToolStripMenuItem
             // 
@@ -257,12 +261,14 @@
             this.nuevoImpuestoToolStripMenuItem.Name = "nuevoImpuestoToolStripMenuItem";
             this.nuevoImpuestoToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.nuevoImpuestoToolStripMenuItem.Text = "&Nuevo impuesto";
+            this.nuevoImpuestoToolStripMenuItem.Click += new System.EventHandler(this.nuevoImpuestoToolStripMenuItem_Click);
             // 
             // impuestosRegistradosToolStripMenuItem
             // 
             this.impuestosRegistradosToolStripMenuItem.Name = "impuestosRegistradosToolStripMenuItem";
             this.impuestosRegistradosToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.impuestosRegistradosToolStripMenuItem.Text = "&Impuestos registrados";
+            this.impuestosRegistradosToolStripMenuItem.Click += new System.EventHandler(this.impuestosRegistradosToolStripMenuItem_Click);
             // 
             // empleadosToolStripMenuItem
             // 

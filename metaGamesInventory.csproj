@@ -67,11 +67,29 @@
     <Compile Include="CUCompany.Designer.cs">
       <DependentUpon>CUCompany.cs</DependentUpon>
     </Compile>
+    <Compile Include="CUComprascs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CUComprascs.designer.cs">
+      <DependentUpon>CUComprascs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CUDescuentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CUDescuentos.designer.cs">
+      <DependentUpon>CUDescuentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="CUEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CUEmployees.Designer.cs">
       <DependentUpon>CUEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CUImpuestos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CUImpuestos.designer.cs">
+      <DependentUpon>CUImpuestos.cs</DependentUpon>
     </Compile>
     <Compile Include="CUProduct.cs">
       <SubType>Form</SubType>
@@ -165,11 +183,29 @@
     <Compile Include="RDCompany.Designer.cs">
       <DependentUpon>RDCompany.cs</DependentUpon>
     </Compile>
+    <Compile Include="RDCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RDCompras.designer.cs">
+      <DependentUpon>RDCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RDDescuento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RDDescuento.designer.cs">
+      <DependentUpon>RDDescuento.cs</DependentUpon>
+    </Compile>
     <Compile Include="RDEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RDEmployees.Designer.cs">
       <DependentUpon>RDEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RDImpuestos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RDImpuestos.designer.cs">
+      <DependentUpon>RDImpuestos.cs</DependentUpon>
     </Compile>
     <Compile Include="RDProduct.cs">
       <SubType>Form</SubType>
@@ -204,8 +240,17 @@
     <EmbeddedResource Include="CUCompany.resx">
       <DependentUpon>CUCompany.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CUComprascs.resx">
+      <DependentUpon>CUComprascs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CUDescuentos.resx">
+      <DependentUpon>CUDescuentos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CUEmployees.resx">
       <DependentUpon>CUEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CUImpuestos.resx">
+      <DependentUpon>CUImpuestos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CUProduct.resx">
       <DependentUpon>CUProduct.cs</DependentUpon>
@@ -237,8 +282,17 @@
     <EmbeddedResource Include="RDCompany.resx">
       <DependentUpon>RDCompany.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RDCompras.resx">
+      <DependentUpon>RDCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDDescuento.resx">
+      <DependentUpon>RDDescuento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RDEmployees.resx">
       <DependentUpon>RDEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDImpuestos.resx">
+      <DependentUpon>RDImpuestos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RDProduct.resx">
       <DependentUpon>RDProduct.cs</DependentUpon>
