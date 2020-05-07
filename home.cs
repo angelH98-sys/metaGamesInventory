@@ -173,5 +173,53 @@ namespace metaGamesInventory
             childForm.Text = "Ventas registradas";
             childForm.Show();
         }
+
+        private void nuevaCompraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CUComprascs childForm = new CUComprascs();
+            childForm.MdiParent = this;
+            childForm.Text = "Nueva Compra";
+            childForm.Show();
+        }
+
+        private void comprasRegistradasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RDCompras childForm = new RDCompras();
+            childForm.MdiParent = this;
+            childForm.Text = "Compras registradas";
+            childForm.Show();
+        }
+
+        private void nuevaPromociónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CUDescuentos childForm = new CUDescuentos();
+            childForm.MdiParent = this;
+            childForm.Text = "Nueva Descuento";
+            childForm.Show();
+        }
+
+        private void promocionesRegistradasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RDDescuento childForm = new RDDescuento();
+            childForm.MdiParent = this;
+            childForm.Text = "Descuento registradas";
+            childForm.Show();
+        }
+
+        private void nuevoImpuestoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CUImpuestos childForm = new CUImpuestos();
+            childForm.MdiParent = this;
+            childForm.Text = "Nueva Impuesto";
+            childForm.Show();
+        }
+
+        private void impuestosRegistradosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RDImpuestos childForm = new RDImpuestos ();
+            childForm.MdiParent = this;
+            childForm.Text = "Impuestos registradas";
+            childForm.Show();
+        }
     }
 }
