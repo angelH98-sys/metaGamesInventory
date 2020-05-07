@@ -82,7 +82,8 @@ namespace metaGamesInventory
         private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ResetPassword form = new ResetPassword();
-            form.ShowDialog();
+            form.Show();
+            this.Hide();
         }
     }
 }

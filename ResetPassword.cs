@@ -68,16 +68,21 @@ namespace metaGamesInventory
         {
             if (checkAnswer())
             {
-                label2.Visible = true;
-                txtPassword.Visible = true;
-                txtPassword.Text = userExists.login_pass;
+                PasswordResetConfirmation form = new PasswordResetConfirmation(userExists);
+                form.Show();
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("Respuesta incorrecta", "Operación fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                label2.Visible = false;
-                txtPassword.Visible = false;
             }
+        }
+
+        private void VolverToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login form = new Login();
+            form.Show();
+            this.Hide();
         }
     }
 }
