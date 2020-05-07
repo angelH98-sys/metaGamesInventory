@@ -85,7 +85,7 @@ namespace metaGamesInventory
                     discountPercentage = di.Where(d => d.id == p.id_discount).First().percentage.ToString();
                     discountAmount = p.amount_discount.ToString();
                 }
-                dgvProduct.Rows.Add(pr.Where(d=> d.id == p.id_product).First().name,
+                    dgvProduct.Rows.Add(pr.Where(d=> d.id == p.id_product).First().name,
                     p.quantity.ToString(),
                     p.unit_price.ToString(),
                     discountName,
@@ -203,8 +203,10 @@ namespace metaGamesInventory
             btnModify.Enabled = false;
             btnDelete.Enabled = false;
             btnApprove.Enabled = false;
-
+            orderProducts = new List<orders_product>();
+            taxes = new List<tax>();
             sellSelected = new orders();
+
             txtCustomer.Text = "";
             txtEmployee.Text = "";
             txtTaxes.Text = "";

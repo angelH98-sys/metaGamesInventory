@@ -113,14 +113,23 @@ namespace metaGamesInventory
                     using (metaGamesInventoryAlterEntities BD = new metaGamesInventoryAlterEntities())
                     //Creamos un nuevo contexto en la base de datos
                     {
-                        BD.Entry(selected).State = System.Data.Entity.EntityState.Deleted;//Removemos el registro seleccionado del contexto
-                        BD.SaveChanges();//Persistimos los cambios en la base de datos
-                        MessageBox.Show("Registro eliminado exitosamente", "Operación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        lstDetail.Items.Clear();
+                        try
+                        {
+                            BD.Entry(selected).State = System.Data.Entity.EntityState.Deleted;//Removemos el registro seleccionado del contexto
+                            BD.SaveChanges();//Persistimos los cambios en la base de datos
+                            MessageBox.Show("Registro eliminado exitosamente", "Operación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            lstDetail.Items.Clear();
 
-                        products = BD.product.ToList<product>();//Asignamos los valores del contexto de la tabla Company al listado previamente declarado
+                            products = BD.product.ToList<product>();//Asignamos los valores del contexto de la tabla Company al listado previamente declarado
 
-                        refreshDGV();
+                            refreshDGV();
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Existen compras o ventas relacionadas con la información del producto seleccionado.", "Operación Fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            refreshDGV();
+                        }
+                        
                     }
                 }
             }

@@ -132,6 +132,7 @@ namespace metaGamesInventory
         {
             //Identificamos el producto seleccionado en el dgvInventory para su registro en la orden
             selected = new orders_product();
+            isModify = false;
             try
             {
                 product productSelected = inventory.ElementAt<product>(e.RowIndex);
@@ -309,7 +310,7 @@ namespace metaGamesInventory
             }
             
             taxes = Math.Round(untaxed * (percentage / 100),2);
-            total = untaxed - taxes;
+            total = untaxed + taxes;
             txtUntaxed.Text = untaxed.ToString();
             txtTaxes.Text = taxes.ToString();
             txtTotal.Text = total.ToString();
@@ -441,6 +442,27 @@ namespace metaGamesInventory
                 DB.SaveChanges();
 
                 MessageBox.Show("Venta fue modificada exitoxamente.", "Venta modificada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void txtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            string search = txtSearch.Text.ToLower();
+            for (int i = 0; i < dgvInventory.RowCount; i++)
+            {
+                if(dgvInventory.Rows[i].Cells[1].Value != null)
+                {
+                    if (!dgvInventory.Rows[i].Cells[1].Value.ToString().ToLower().Contains(search))
+                    {
+                        CurrencyManager cm = (CurrencyManager)BindingContext[dgvInventory.DataSource];
+                        cm.SuspendBinding();
+                        dgvInventory.Rows[i].Visible = false;
+                    }
+                    else
+                    {
+                        dgvInventory.Rows[i].Visible = true;
+                    }
+                }
             }
         }
     }

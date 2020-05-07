@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -157,16 +159,19 @@ namespace metaGamesInventory
 
         private void btnSend_Click_1(object sender, EventArgs e)
         {
-            if (companyToUpdate == null)
-            /*Si el objeto companyToUpdate no cambia su estado inicial (null),
-             significa que no proviene del formulario RDCompany, por ende,
-             se ejecutara una inserción a la tabla Company*/
+            if (validateFields())
             {
-                createCompany();
-            }
-            else
-            {
-                updateCompany();
+                if (companyToUpdate == null)
+                /*Si el objeto companyToUpdate no cambia su estado inicial (null),
+                 significa que no proviene del formulario RDCompany, por ende,
+                 se ejecutara una inserción a la tabla Company*/
+                {
+                    createCompany();
+                }
+                else
+                {
+                    updateCompany();
+                }
             }
         }
 
@@ -184,6 +189,61 @@ namespace metaGamesInventory
                 form.Show();
                 this.Close();
             }
+        }
+
+        private bool validateFields()
+        {
+            if(txtName.Text.Trim().Length == 0)
+            {
+                errorProvider.SetError(txtName, "Debe ingresar el nombre de la compañía.");
+                return false;
+            }
+            else
+            {
+                errorProvider.SetError(txtName,null);
+            }
+
+            if (txtEmail.Text.Trim().Length == 0)
+            {
+                errorProvider.SetError(txtEmail, "Debe ingresar el email de contacto de la compañía.");
+                return false;
+            }
+            else
+            {
+                errorProvider.SetError(txtEmail, null);
+            }
+
+            try
+            {
+                MailAddress m = new MailAddress(txtEmail.Text);
+                errorProvider.SetError(txtEmail, null);
+            }
+            catch (FormatException)
+            {
+                errorProvider.SetError(txtEmail, "Formato de e-mail incorrecto.");
+                return false;
+            }
+
+            if (txtPhone.Text.Trim().Length == 0)
+            {
+                errorProvider.SetError(txtPhone, "Debe ingresar el teléfono de contacto de la compañía.");
+                return false;
+            }
+            else
+            {
+                errorProvider.SetError(txtPhone, null);
+            }
+            Regex rx = new Regex("^[0-9]{8}");
+            if (!rx.IsMatch(txtPhone.Text))
+            {
+                errorProvider.SetError(txtPhone, "Formato de teléfono incorrecto. (Formáto requerido: 00000000)");
+                return false;
+            }
+            else
+            {
+                errorProvider.SetError(txtPhone, null);
+            }
+            return true;
         }
     }
 }

@@ -99,5 +99,23 @@ namespace metaGamesInventory
             lstDetail.Items.Add("\nE-mail: \n" + selected.email.ToString());
             lstDetail.Items.Add("\nTeléfono: \n" + selected.phone.ToString());
         }
+
+        private void txtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            string search = txtSearch.Text.ToLower();
+            for (int i = 0; i < dgvData.RowCount; i++)
+            {
+                if (!dgvData.Rows[i].Cells[1].Value.ToString().ToLower().Contains(search))
+                {
+                    CurrencyManager cm = (CurrencyManager)BindingContext[dgvData.DataSource];
+                    cm.SuspendBinding();
+                    dgvData.Rows[i].Visible = false;
+                }
+                else
+                {
+                    dgvData.Rows[i].Visible = true;
+                }
+            }
+        }
     }
 }
